@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: rgb(245, 243, 243);
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   align-items: center;
   font-family: "Roboto", sans-serif;
   height: 100vh;
+  background-color: #6ab6c0;
 }
 
 form h1 {
@@ -19,24 +21,62 @@ form h1 {
 }
 
 form {
-    background-color: whitesmoke;
-    width: 380px;
-    height: 400px;
+  background-color: #164B60;
+  width: 380px;
+  max-width: 90%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+}
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+form .field input {
+  background: transparent;
+  border: none;
+  width: 250px;
+  border-bottom: 2px solid white;
+  padding: 10px 0px;
+  font-size: 18px;
+}
+
+form .field input:focus {
+  outline: none;
+  border-bottom: 2px solid #A2FF86;
+}
+
+.field > div {
+  pointer-events: none;
 }
 
 .field > div > span {
   position: relative;
-  top: 20px;
-  pointer-events: none;
-  transition: top 0.2s ease-out;
+  top: 30px;
+  /* pointer-events: none; */
+  transition: top 0.3s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-size: 18px;
 }
 
 .field > div > span.focused {
-  top: 0px
+  top: 0px;
+  color: #A2FF86;
 }
 
+.login-btn {
+  width: 250px;
+  height: 35px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+
+.last {
+  width: 250px;
+}
+
+.last a {
+  color: #A2FF86;
+}
